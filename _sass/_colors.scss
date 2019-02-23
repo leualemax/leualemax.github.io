@@ -1,0 +1,25 @@
+$primary: #828282 !default;
+$secondary: #3A3A3A !default;
+$pink: #ff00ff !default;
+$yellow: yellow !default;
+$blue: #00ffff !default;
+
+$colors: ( // color map
+
+primary: $primary,
+secondary: $secondary,
+pink: $pink,
+yellow: $yellow,
+blue: $blue,
+);
+
+@each $name,
+$color in $colors {
+  .color-#{$name} {
+    color: $color !important;
+  }
+
+  .bg-#{$name} {
+    background: $color !important;
+  }
+}

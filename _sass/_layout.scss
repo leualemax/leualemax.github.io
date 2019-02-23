@@ -1,0 +1,101 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+
+    // position for main and header 
+    main,
+    header {
+      width: calc(100% - 32px) !important;
+      margin: 0px 16px !important;
+
+      .site-title {
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+
+body {
+  background: $primary;
+  min-height: 100vh;
+  padding-bottom: 64px;
+
+  // position for main and header 
+  main,
+  header {
+    width: 50%;
+    margin: auto;
+  }
+
+  header {
+    padding: 32px 0px;
+
+    h5,
+    .site-title,
+    .page-link {
+      font-family: 'Major Mono Display', monospace;
+    }
+
+    .site-title {
+      font-size: 45px;
+      text-decoration: none;
+      color: $secondary;
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin-bottom: 4px;
+      transition: color 0.4s ease-in-out;
+
+      &:hover {
+        color: $pink;
+      }
+
+    }
+
+    h5 {
+      font-size: 15px;
+      text-decoration: none;
+      color: $secondary;
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin: 8px 0px;
+    }
+
+    .master-nav {
+      background: $secondary;
+      padding: 8px 16px;
+      margin: 32px 0px;
+      text-align: center;
+
+      .uk-breadcrumb {
+        width: fit-content;
+        margin: 0px auto;
+
+
+        a {
+          color: $primary;
+          transition: color 0.4s ease-in-out;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .home {
+
+      img,
+      blockquote {
+        float: none;
+        display: block;
+        margin: auto;
+        width: fit-content;
+      }
+
+    }
+  }
+}

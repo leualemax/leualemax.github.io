@@ -1,0 +1,25 @@
+.game-article {
+  .fas {
+    margin: 0px 8px;
+  }
+
+  .fa-trophy {
+    color: $yellow
+  }
+
+  .fa-bookmark {
+    color: $pink
+  }
+
+  .uk-label {
+    background-color: $blue;
+  }
+
+  .release-date {
+    color: $secondary;
+  }
+
+  h4 {
+    margin-bottom: 16px;
+  }
+}

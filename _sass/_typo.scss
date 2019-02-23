@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+p,
+a,
+span,
+div,
+* {
+  font-family: 'Abel', sans-serif;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+:not(pre)>code,
+:not(pre)>kbd,
+:not(pre)>samp {
+  background: transparent !important;
+  padding: 0px !important;
+  color: $blue !important;
+  opacity: 0.6;
+  font-size: inherit !important;
+}
+
+
+article {
+
+  .title {
+    font-size: 18px;
+    font-family: 'Major Mono Display', monospace !important;
+  }
+
+  .uk-article-title {
+    margin-bottom: 0px;
+
+    a {
+      font-size: 25px;
+      font-weight: 300;
+      text-transform: none;
+    }
+  }
+
+  .uk-article-meta {
+    color: $blue !important;
+    font-weight: 100;
+    opacity: 0.3;
+    margin-top: 4px;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+a {
+  &::before {
+    border-bottom-color: $pink !important
+  }
+}
+
+hr {
+  border-top-color: $secondary !important;
+}
+
+p {
+  color: $secondary;
+}
