@@ -1,0 +1,30 @@
+<article class="uk-comment game-article">
+    <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+      <div class="uk-width-auto">
+        <img class="uk-comment-avatar" src="{{game.cover}}" alt="cover" width="80" height="80">
+      </div>
+
+      <div class="uk-width-expand">
+        <h4 class="uk-comment-title">
+          
+            <a class="uk-link-reset" href="#">{{game.title}}</a>
+            {%- if game.finished -%}
+            <i class="fas fa-trophy" uk-tooltip="Terminado"></i>
+            {%- endif -%}
+            {%- if game.in_collection -%}
+            <i class="fas fa-bookmark" uk-tooltip="Na Biblioteca de {{game.owned_platform}}"></i>
+            {%- endif -%}
+
+
+        </h4>
+        <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+          <li class="release-date">{{game.release}}</li>
+          <li><span class="uk-label">{{game.original_platform}}</span></li>
+        </ul>
+      </div>
+    </header>
+    <div class="uk-comment-body">
+      <p>{{game.content}}</p>
+    </div>
+  </article>
+

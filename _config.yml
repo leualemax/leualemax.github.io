@@ -22,7 +22,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: leualemax
 collections:
-  - games
+  games:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "games"
+    values:
+      layout: "game"
 # Build settings
 markdown: kramdown
 theme: minima
