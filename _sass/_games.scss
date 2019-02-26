@@ -1,3 +1,24 @@
+#filter-bar {
+  li {
+    margin: 0px !important;
+
+    a {
+      padding: 0px !important;
+    }
+  }
+}
+
+.games {
+  form.uk-search-default {
+    width: 100%;
+    margin-bottom: 32px;
+
+    input {
+      border-radius: 8px;
+    }
+  }
+}
+
 .game-article {
   .fas {
     margin: 0px 8px;
@@ -14,7 +35,7 @@
   .fa-gamepad {
     color: $blue
   }
-  
+
   .uk-label {
     background-color: $blue;
   }

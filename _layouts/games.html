@@ -3,32 +3,33 @@ layout: default
 ---
 
 <div class="games">
-
   <article class="games">
 
     <h1 class="title">Games</h1>
 
     {{content}}
-    <ul class="uk-list">
-    {%- for game in site.games -%}
-    <div class="uk-grid-small game-article" uk-grid>
-        <div class="uk-width-expand" uk-leader>
-            <a href="{{game.url}}" class="uk-button uk-button-text">{{game.title}}</a> 
-        </div>
-        <div>
-          {%- if game.playing -%}
-          <i class="fas fa-gamepad" uk-tooltip="Jogando"></i>
-          {%- endif -%}
-          {%- if game.finished -%}
-          <i class="fas fa-trophy" uk-tooltip="Terminado"></i>
-          {%- endif -%}
-          {%- if game.in_collection -%}
-          <i class="fas fa-bookmark" uk-tooltip="Na Biblioteca de {{game.owned_platform}}"></i>
-          {%- endif -%}
-        </div>
+
+    <hr>
+
+    <div uk-grid>
+      <div class="uk-width-auto@m">
+
+        <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Articles</a></li>
+        </ul>
+
+      </div>
+      <div class="uk-width-expand@m">
+
+        <ul id="component-tab-left" class="uk-switcher">
+          <li>{%- include games.library.html -%}</li>
+          <li>{%- include games.articles.html -%}</li>
+        </ul>
+
+      </div>
     </div>
-    {%- endfor -%}
-    </ul>
   </article>
+
 
 </div>

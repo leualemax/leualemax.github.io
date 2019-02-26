@@ -1,0 +1,115 @@
+<form class="uk-search uk-search-default">
+  <span uk-search-icon></span>
+  <input onchange="change(this)" class="uk-search-input" type="search" placeholder="Search...">
+</form>
+
+<div class="search-lib" uk-filter="target: .js-filter">
+  <ul id="filter-bar" class="uk-subnav uk-subnav-pill filter">
+    <li uk-filter-control="filter: [data-playing='true']; group: playing;">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-gamepad fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li uk-filter-control="filter: [data-playing='']; group: playing;">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-gamepad fa-stack-1x"></i>
+          <i class="fas fa-slash fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li uk-filter-control="filter: [data-finished='true']; group: finished;">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-trophy fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li uk-filter-control="filter: [data-finished='false']; group: finished;">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-trophy fa-stack-1x"></i>
+          <i class="fas fa-slash fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li uk-filter-control="filter: [data-collection='true']; group: collection;">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-bookmark fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li uk-filter-control="filter: [data-collection='false']; group: collection;">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-bookmark fa-stack-1x"></i>
+          <i class="fas fa-slash fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li uk-filter-control="">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-redo-alt fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+  </ul>
+
+
+  <ul class="uk-list js-filter">
+    {%- for game in site.games -%}
+    <li data-playing="{{game.playing}}" data-finished="{{game.finished}}" data-title="{{game.title | downcase}}"
+      data-collection="{{game.in_collection}}">
+      <div class="uk-grid-small game-article" uk-grid>
+        <div class="uk-width-expand" uk-leader>
+          <a href="{{game.url}}" class="uk-button uk-button-text">{{game.title}}</a>
+        </div>
+        <div>
+          {%- if game.playing -%}
+          <i class="fas fa-gamepad" uk-tooltip="Jogando"></i>
+          {%- endif -%}
+          {%- if game.finished -%}
+          <i class="fas fa-trophy" uk-tooltip="Terminado"></i>
+          {%- endif -%}
+          {%- if game.in_collection -%}
+          <i class="fas fa-bookmark" uk-tooltip="Na Biblioteca de {{game.owned_platform}}"></i>
+          {%- endif -%}
+        </div>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</div>
+
+<script>
+  function change(e) {
+    var filter = document.querySelector('.js-filter');
+    var filterBar = document.querySelector('#filter-bar');
+    var all = filter.querySelectorAll('li');
+
+    if (e.value !== '') {
+      for (var i = 0; i < all.length; i++) {
+        if (all[i].tagName == "LI") {
+          all[i].style.display = 'none';
+        }
+      }
+
+      var activeFilter = filter.querySelectorAll('li [data-title^="' + e.value + '"]');
+      for (var i = 0; i < activeFilter.length; i++) {
+        if (activeFilter[i].tagName == "LI") {
+          activeFilter[i].style.display = 'block';
+        }
+      }
+    } else {
+      for (var i = 0; i < all.length; i++) {
+        if (all[i].tagName == "LI") {
+          all[i].style.display = 'block';
+        }
+      }
+    }
+  }
+</script>
