@@ -6,6 +6,7 @@ release: 1999-08-31 00:00:00
 finished: false
 finished_date: 
 in_collection: true
+playing: true
 cover: "https://www.giantbomb.com/api/image/scale_small/1790001-box_dinocr.png"
 ---
 

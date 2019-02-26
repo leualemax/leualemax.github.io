@@ -16,6 +16,9 @@ layout: default
             <a href="{{game.url}}" class="uk-button uk-button-text">{{game.title}}</a> 
         </div>
         <div>
+          {%- if game.playing -%}
+          <i class="fas fa-gamepad" uk-tooltip="Jogando"></i>
+          {%- endif -%}
           {%- if game.finished -%}
           <i class="fas fa-trophy" uk-tooltip="Terminado"></i>
           {%- endif -%}

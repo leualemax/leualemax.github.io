@@ -6,6 +6,7 @@ release: 2004-04-27 00:00:00
 finished: false
 finished_date: 
 in_collection: true
+playing: true
 cover: "https://www.giantbomb.com/api/image/scale_small/2115768-box_onimusha3.png"
 ---
 
