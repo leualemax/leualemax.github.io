@@ -15,14 +15,16 @@ layout: default
       <div class="uk-width-auto@m">
 
         <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
-          <li><a href="#">Library</a></li>
-          <li><a href="#">Articles</a></li>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Biblioteca</a></li>
+          <li><a href="#">Artigos</a></li>
         </ul>
 
       </div>
       <div class="uk-width-expand@m">
 
         <ul id="component-tab-left" class="uk-switcher">
+          <li>{%- include games.profile.html -%}</li>
           <li>{%- include games.library.html -%}</li>
           <li>{%- include games.articles.html -%}</li>
         </ul>

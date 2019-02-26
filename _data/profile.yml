@@ -1,0 +1,15 @@
+steam:
+  user: leualemax
+  url: https://steamcommunity.com/id/leualemax
+psn:
+  user: leonardoalemax
+  url: https://my.playstation.com/profile/leonardoalemax
+systems:
+  - name: Playstation 4
+    firmware: OFW 7.2
+  - name: Nintendo Switch
+    firmware: CFW 6.2 (sxos)
+  - name: Nintendo 3ds
+    firmware: CFW Lumia
+  - name: Playstation 3
+    firmware: CFW 4.83 (ferrox)

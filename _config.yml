@@ -24,10 +24,17 @@ github_username: leualemax
 collections:
   games:
     output: true
+  systems:
+    output: true
 defaults:
   - scope:
       path: ""
       type: "games"
+    values:
+      layout: "game"
+  - scope:
+      path: ""
+      type: "systems"
     values:
       layout: "game"
 # Build settings

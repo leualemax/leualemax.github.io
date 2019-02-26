@@ -1,0 +1,40 @@
+<ul class="uk-list js-filter">
+  <li>
+    <img class="uk-comment-avatar" src="https://upload.wikimedia.org/wikipedia/en/9/97/PSN_logo_free.png" width="40"
+      height="40" alt="">
+    <a class="uk-link-reset" href="{{site.data.profile.psn.url}}" target="_blank">
+      {{site.data.profile.psn.user}}
+    </a>
+  </li>
+  <li>
+    <img class="uk-comment-avatar" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Steam_Logo.png" width="40"
+      height="40" alt="">
+    <a class="uk-link-reset" href="{{site.data.profile.steam.url}}" target="_blank">
+      {{site.data.profile.steam.user}}
+    </a>
+  </li>
+</ul>
+
+<h3>Jogando</h3>
+
+<ul class="uk-list js-filter">
+  {%- assign posts = site.games | where: "playing", true | -%}
+  {%- for game in posts -%}
+  <li>
+    <img class="uk-comment-avatar" src="{{game.cover}}" width="40" height="40" alt="">
+    <a href="{{game.url}}" class="uk-button uk-button-text">{{game.title}}</a>
+  </li>
+  {%- endfor -%}
+</ul>
+
+<h3>Sistemas</h3>
+
+<ul class="uk-list js-filter">
+  {%- assign systems = site.systems -%}
+  {%- for system in systems -%}
+  <li>
+    <img class="uk-comment-avatar" src="#" width="40" height="40" alt="">
+    <a href="{{system.url}}" class="uk-button uk-button-text">{{system.name }} - ({{system.firmware}})</a>
+  </li>
+  {%- endfor -%}
+</ul>
