@@ -4,14 +4,21 @@ $pink: #ff00ff !default;
 $yellow: yellow !default;
 $blue: #00ffff !default;
 
-$colors: ( // color map
+$playstation-4: #003791;
+$playstation-3: #146eb4;
+$nintendo-switch: #e4000f;
+$nintendo-3ds: #727272;
 
+$colors: ( // color map
 primary: $primary,
 secondary: $secondary,
 pink: $pink,
 yellow: $yellow,
 blue: $blue,
 );
+
+
+
 
 @each $name,
 $color in $colors {

@@ -15,6 +15,22 @@
   }
 }
 
+@media only screen and (min-device-width : 480px) and (max-device-width : 670px) {
+  body {
+
+    // position for main and header 
+    main,
+    header {
+      width: calc(100% - 128px) !important;
+      margin: 0px 64px !important;
+
+      .site-title {
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+
 body {
   background: $primary;
   min-height: 100vh;
