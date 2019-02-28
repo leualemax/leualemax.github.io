@@ -16,7 +16,9 @@ layout: default
     <i class="fas fa-bookmark" uk-tooltip="Na Biblioteca de {{page.owned_platform}}"></i>
     {%- endif -%}
   </div>
-  
+
   {{content}}
-  
+
+
+  {%- include disqus_comments.html -%}
 </article>
