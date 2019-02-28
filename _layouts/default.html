@@ -20,7 +20,7 @@
       localStorage.setItem('leualemax-theme', theme);
     }
 
-    window.changeTheme(localStorage['leualemax-theme']);
+    window.changeTheme(localStorage['leualemax-theme'] || "light");
 
     var bt = document.querySelector("#toggle-theme");
     bt.addEventListener('click', function () {
