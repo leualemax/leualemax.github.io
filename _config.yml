@@ -16,6 +16,8 @@
 title: The Leu Alemax
 subtitle: not a futurist
 email: leualemax@gmail.com
+disqus:
+  shortname: leualemax
 description: >- # this means to ignore newlines until "baseurl:"
   This is my spot in internet.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -37,7 +39,7 @@ defaults:
       type: "systems"
     values:
       layout: "game"
-# Build settings
+# Build setting
 markdown: kramdown
 theme: minima
 plugins:

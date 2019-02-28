@@ -3,14 +3,14 @@ layout: post
 title: "Gutenberg não printou essa."
 date: 2019-02-22 20:55:30 -0300
 categories: article
+comments: true
 ---
 
-> Ola gente boa tudo bem? essa é so a parte inicial do post, sexta durante a live eu libero o resto! por enquanto é só um spoiler pra se preparar pra live sexta as 9:00 no nama-dev.
-> Ate lá!
-
-Com as redes sociais, a nossa capacidade de criar e publicar conteúdo é quase infinita, porém ao mesmo tempo, elas limitam o formato e o alcance desse conteúdo.
-
-Programação é uma habilidade necessária hoje em dia, porém muitas vezes proibitiva e de difícil acesso.
+> Com as redes sociais, a nossa capacidade de criar e publicar conteúdo é quase infinita, porém ao mesmo tempo, elas limitam o formato e o alcance desse conteúdo.
+>
+> A internet não foi feita para ter limites.
+>
+> Programação é uma habilidade necessária hoje em dia, muitas vezes proibitiva e de difícil acesso muitas vezes não sendo uma opção válida.
 
 ## Onde estaria o meio termo?
 

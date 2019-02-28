@@ -17,19 +17,34 @@ p {
 :not(pre)>code,
 :not(pre)>kbd,
 :not(pre)>samp {
-  background: transparent !important;
-  padding: 0px !important;
-  color: $blue !important;
-  opacity: 0.6;
+  padding: 0px 4px !important;
+  border-radius: 4px;
+  margin: 0px 4px;
+  white-space: normal;
   font-size: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
 }
 
+blockquote {
+  padding: 8px 16px 8px 16px;
+
+  p {
+    font-size: .8em;
+  }
+}
 
 article {
 
   .title {
     font-size: 18px;
     font-family: 'Major Mono Display', monospace !important;
+  }
+
+  img {
+    max-height: 640px;
+    margin: auto;
+    display: block;
   }
 
   .uk-article-title {
@@ -43,7 +58,6 @@ article {
   }
 
   .uk-article-meta {
-    color: $blue !important;
     font-weight: 100;
     opacity: 0.3;
     margin-top: 4px;
@@ -54,18 +68,4 @@ article {
       opacity: 1;
     }
   }
-}
-
-a {
-  &::before {
-    border-bottom-color: $pink !important
-  }
-}
-
-hr {
-  border-top-color: $secondary !important;
-}
-
-p {
-  color: $secondary;
 }

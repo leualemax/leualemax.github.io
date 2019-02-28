@@ -1,12 +1,10 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 670px) {
   body {
-
-    // position for main and header 
-    main,
-    header {
+    main {
       width: calc(100% - 32px) !important;
       margin: 0px 16px !important;
+      z-index: 1;
 
       .site-title {
         font-size: 30px !important;
@@ -15,93 +13,89 @@
   }
 }
 
-@media only screen and (min-device-width : 480px) and (max-device-width : 670px) {
-  body {
-
-    // position for main and header 
-    main,
-    header {
-      width: calc(100% - 128px) !important;
-      margin: 0px 64px !important;
-
-      .site-title {
-        font-size: 30px !important;
-      }
-    }
-  }
-}
 
 body {
-  background: $primary;
-  min-height: 100vh;
   padding-bottom: 64px;
+  display: block;
 
-  // position for main and header 
-  main,
-  header {
-    width: 50%;
-    margin: auto;
+  min-height: 100vh;
+
+  #toggle-theme {
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
   }
 
-  header {
-    padding: 32px 0px;
+  main {
+    width: 75%;
+    max-width: 780px;
+    margin: auto;
+    padding-bottom: 64px;
 
-    h5,
-    .site-title,
-    .page-link {
-      font-family: 'Major Mono Display', monospace;
-    }
+    header {
+      padding: 64px 0px;
 
-    .site-title {
-      font-size: 45px;
-      text-decoration: none;
-      color: $secondary;
-      text-align: center;
-      width: 100%;
-      display: block;
-      margin-bottom: 4px;
-      transition: color 0.4s ease-in-out;
-
-      &:hover {
-        color: $pink;
+      h5,
+      .site-title,
+      .page-link {
+        font-family: 'Major Mono Display', monospace;
       }
 
-    }
-
-    h5 {
-      font-size: 15px;
-      text-decoration: none;
-      color: $secondary;
-      text-align: center;
-      width: 100%;
-      display: block;
-      margin: 8px 0px;
-    }
-
-    .master-nav {
-      background: $secondary;
-      padding: 8px 16px;
-      margin: 32px 0px;
-      text-align: center;
-
-      .uk-breadcrumb {
-        width: fit-content;
-        margin: 0px auto;
+      .site-title {
+        font-size: 45px;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-bottom: 4px;
 
 
-        a {
-          color: $primary;
-          transition: color 0.4s ease-in-out;
+      }
 
-          &:hover {
-            color: $blue;
+      h5 {
+        font-size: 15px;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin: 8px 0px;
+      }
+
+      .master-nav {
+        border-radius: 4px;
+        padding: 8px 16px;
+        margin: 32px 0px;
+        text-align: center;
+
+
+        &::after {
+          display: block;
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          margin-top: -22px;
+          margin-left: -21px;
+          border-radius: 2px;
+        }
+
+        .uk-breadcrumb {
+          width: fit-content;
+          margin: 0px auto;
+
+
+          a {
+            transition: color 0.4s ease-in-out;
           }
         }
       }
     }
-  }
 
-  main {
     .home {
 
       img,

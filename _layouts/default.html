@@ -2,17 +2,52 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 {%- include head.html -%}
 
-<body class="uk-dark">
-  {%- include header.html -%}
-
+<body class="theme-light">
+  <button id="toggle-theme" class="uk-button">
+    <i class="fas fa-palette"></i>
+  </button>
   <main>
-    <div class="uk-width-2-4">
-      {{ content }}
-    </div>
+    {%- include header.html -%}
+    {{ content }}
   </main>
-
   <script>
+    // code for change theme 
 
+    window.changeTheme = function (theme) {
+      document.querySelector("body").className = "";
+      document.querySelector("body").classList.add("theme-" + theme);
+      window.theme = theme;
+      localStorage.setItem('leualemax-theme', theme);
+    }
+
+    window.changeTheme(localStorage['leualemax-theme']);
+
+    var bt = document.querySelector("#toggle-theme");
+    bt.addEventListener('click', function () {
+      if (window.theme == 'light') {
+        window.changeTheme('dark');
+      } else {
+        window.changeTheme('light');
+      }
+    });
+
+    // code for change #active
+    window.activateTags = function () {
+      var tags = document.querySelectorAll(".active-tag");
+      for (let index = 0; index < tags.length; index++) {
+        const element = tags[index];
+        url = element.attributes.getNamedItem("data-tag").value
+        if (location.pathname == "/" && url === "home") {
+          element.classList.add('tag-activate');
+        } else if (location.pathname.includes(url)) {
+          element.classList.add('tag-activate');
+        } else {
+          element.classList.remove('tag-activate');
+        }
+      }
+    }
+
+    window.activateTags();
   </script>
 </body>
 
