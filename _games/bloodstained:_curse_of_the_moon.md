@@ -1,7 +1,7 @@
 ---
 title: "Bloodstained: Curse of the Moon"
 original_platform: PC 3DSE PSNV XONE PS4 NSW
-owned_platform: SWITCH
+owned_platform: NSW
 release: 2018-05-24 00:00:00
 finished: true
 finished_date: JUN 2018

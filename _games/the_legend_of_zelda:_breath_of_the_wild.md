@@ -1,7 +1,7 @@
 ---
 title: "The Legend of Zelda: Breath of the Wild"
 original_platform: WIIU NSW
-owned_platform: SWITCH
+owned_platform: NSW
 release: 2017-03-03 00:00:00
 finished: true
 finished_date: JAN 2018

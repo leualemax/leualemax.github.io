@@ -1,7 +1,7 @@
 ---
 title: "Super Mario Odyssey"
 original_platform: NSW
-owned_platform: SWITCH
+owned_platform: NSW
 release: 2017-10-27 00:00:00
 finished: true
 finished_date: FEV 2018

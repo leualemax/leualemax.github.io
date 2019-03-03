@@ -1,7 +1,7 @@
 ---
 title: "Bayonetta 2"
 original_platform: WIIU NSW
-owned_platform: SWITCH
+owned_platform: NSW
 release: 2014-09-20 00:00:00
 finished: true
 finished_date: NOV 2018

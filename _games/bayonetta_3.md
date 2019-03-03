@@ -1,7 +1,7 @@
 ---
 title: "Bayonetta"
 original_platform: PC X360 ps3 WIIU NSW
-owned_platform: SWITCH
+owned_platform: NSW
 release: 2011-09-20 00:00:00
 finished: true
 finished_date: NOV 2018
