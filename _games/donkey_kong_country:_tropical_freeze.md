@@ -4,8 +4,9 @@ original_platform: WIIU NSW
 owned_platform: NSW
 release: 2014-02-13 00:00:00
 finished: false
-finished_date: 
+finished_date:
 in_collection: true
+status: INSTALLED
 cover: "https://www.giantbomb.com/api/image/scale_small/2684855-dkc5crop.jpg"
 ---
 

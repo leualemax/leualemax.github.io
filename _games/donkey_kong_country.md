@@ -4,8 +4,9 @@ original_platform: GBA SNES GBC WSHP WIIU N3DS
 owned_platform: 3DS
 release: 1994-11-24 00:00:00
 finished: true
-finished_date: 2008 
+finished_date: 2008
 in_collection: true
+status: INSTALLED
 cover: "https://www.giantbomb.com/api/image/scale_small/2832009-dkc.jpg"
 ---
 

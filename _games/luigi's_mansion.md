@@ -5,6 +5,7 @@ owned_platform: 3DS
 release: 2001-09-14 00:00:00
 finished: false
 finished_date:
+status: INSTALLED
 in_collection: true
 playing: true
 cover: "https://www.giantbomb.com/api/image/scale_small/3055188-7297432047-SQ_3D.jpg"

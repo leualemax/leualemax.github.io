@@ -5,6 +5,7 @@ owned_platform: 3DS
 release: 2004-02-09 00:00:00
 finished: true
 finished_date: JAN 2018
+status: DOWNLOAD
 in_collection: true
 cover: "https://www.giantbomb.com/api/image/scale_small/2617564-mzm.jpg"
 ---

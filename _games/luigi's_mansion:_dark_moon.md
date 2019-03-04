@@ -4,7 +4,8 @@ original_platform: 3DS 3DSE
 owned_platform: 3DS
 release: 2013-03-20 00:00:00
 finished: false
-finished_date: 
+finished_date:
+status: INSTALLED
 in_collection: true
 cover: "https://www.giantbomb.com/api/image/scale_small/2628220-lmdm.jpg"
 ---
