@@ -1,157 +1,125 @@
-#filter-bar {
-  li {
-    margin: 0px !important;
+@mixin games_theme($name, $background, $text, $primary, $secondary) {
+  .theme-#{$name} {
 
-    &.uk-active {
-      a {
-        background-color: transparent !important;
+    #game-systems {
+      margin-left: 0px;
+      margin-bottom: 30px;
 
-        i {
+      .game-system {
+        text-align: center;
+        padding: 0px;
+        margin-left: 0px;
 
-          color: $pink;
+        svg {
+          width: 75%;
+          margin: auto;
+          display: block;
+        }
+
+        span {
+          font-size: .8rem;
+        }
+
+        &:hover {
+          svg {
+            fill: $primary
+          }
         }
       }
     }
 
-    a {
-      padding: 0px !important;
 
-      .fa-stack {
-        width: 2em !important;
+    .game-card {
+      .uk-card {
+        text-decoration: none;
+        display: block;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 2px solid $text;
+        -webkit-box-shadow: 1px 1px 0px 0px $text;
+        -moz-box-shadow: 1px 1px 0px 0px $text;
+        box-shadow: 1px 1px 0px 0px $text;
+        cursor: pointer;
+
+        &:hover {
+          -webkit-box-shadow: 4px 4px 0px 0px $text;
+          -moz-box-shadow: 4px 4px 0px 0px $text;
+          box-shadow: 4px 4px 0px 0px $text;
+        }
+      }
+
+      .platform {
+        padding: 4px;
+        width: calc(100% - 8px);
+        display: block;
+        height: 18px;
+        line-height: 18px;
+        font-size: 14px;
+        color: #fff;
+
+        &.pPS4 {
+          background-color: $playstation-4;
+        }
+
+        &.pNSW {
+          background-color: $nintendo-switch;
+        }
+
+        &.p3DS {
+          background-color: $nintendo-3ds;
+        }
+
+        &.pPS3 {
+          background-color: $playstation-3;
+        }
       }
     }
-  }
-}
 
-#account {
-  padding: 0;
 
-  li {
-    list-style: none;
-    margin: 0px;
-    height: 32px;
-    margin-bottom: 4px;
-    line-height: 32px;
 
-    a {
-      height: 32px;
-      line-height: 32px;
-      display: block;
-      color: $secondary;
 
-      &:hover {
-        color: $pink;
+
+    #filter-bar {
+      li {
+        margin: 0px !important;
+
+        &.uk-active {
+          a {
+            background-color: transparent !important;
+
+            i {
+              color: $secondary;
+            }
+          }
+        }
+
+        a {
+          padding: 0px !important;
+
+          .fa-stack {
+            width: 2em !important;
+          }
+        }
       }
     }
 
-    &:hover {
-      i {
-        color: $pink;
+
+    .game-status-icons {
+      .fas {
+        margin: 0px 8px;
       }
     }
 
-    i {
-      text-align: center;
-      line-height: 32px;
-      width: 32px;
-      height: 32px;
-      float: left;
-      font-size: 24px;
-      color: $secondary;
-      margin-right: 4px;
+    .games {
+      form.uk-search-default {
+        width: 100%;
+        margin-bottom: 32px;
+
+        input {
+          border-radius: 8px;
+        }
+      }
     }
-  }
-}
-
-.playing-game {
-  .platform {
-    padding: 4px;
-    width: calc(100% - 8px);
-    display: block;
-    height: 18px;
-    line-height: 18px;
-    font-size: 14px;
-    color: #fff;
-
-    &.pPS4 {
-      background-color: $playstation-4;
-    }
-
-    &.pNSW {
-      background-color: $nintendo-switch;
-    }
-
-    &.p3DS {
-      background-color: $nintendo-3ds;
-    }
-
-    &.pPS3 {
-      background-color: $playstation-3;
-    }
-  }
-
-}
-
-.uk-tab {
-  a {
-    color: $secondary;
-  }
-
-  .uk-active {
-    a {
-      color: $pink !important;
-      border-color: $pink !important;
-    }
-  }
-
-  &::before {
-    border-bottom-color: $secondary !important;
-  }
-}
-
-
-
-.games {
-  form.uk-search-default {
-    width: 100%;
-    margin-bottom: 32px;
-
-    input {
-      border-radius: 8px;
-    }
-  }
-}
-
-.game-article {
-  .fas {
-    margin: 0px 8px;
-  }
-
-  .fa-trophy {
-    color: $yellow
-  }
-
-  .fa-bookmark {
-    color: $pink
-  }
-
-  .fa-gamepad {
-    color: $blue
-  }
-
-  .uk-label {
-    background-color: $blue;
-  }
-
-  .uk-link-reset {
-    font-weight: bold;
-  }
-
-  .release-date {
-    color: $secondary;
-  }
-
-  h4 {
-    margin-bottom: 16px;
   }
 }

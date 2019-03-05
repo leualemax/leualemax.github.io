@@ -4,34 +4,19 @@ layout: default
 
 <div class="games">
   <article class="games">
+    {{ content }}
 
-    <h1 class="title">Games</h1>
+    <hr />
+    <h5>Onde costumo jogar:</h5>
+    {% include games/games.lib.systems.html %}
 
-    {{content}}
+    <hr />
+    <h5>O que ando jogando:</h5>
+    {%- assign games = site.games | where: "owned_platform", page.abbreviation |
+    where: "playing" , true -%} {% include games/games.lib.cards.html %}
 
-    <hr>
-
-    <div uk-grid>
-      <div class="uk-width-auto@m">
-
-        <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
-          <li><a href="#">Perfil</a></li>
-          <li><a href="#">Biblioteca</a></li>
-          <li><a href="#">Artigos</a></li>
-        </ul>
-
-      </div>
-      <div class="uk-width-expand@m">
-
-        <ul id="component-tab-left" class="uk-switcher">
-          <li>{%- include games.profile.html -%}</li>
-          <li>{%- include games.library.html -%}</li>
-          <li>{%- include games.articles.html -%}</li>
-        </ul>
-
-      </div>
-    </div>
+    <hr />
+    <h5>Todos os meus jogos:</h5>
+    {%- include games/games.library.html -%}
   </article>
-
-
 </div>

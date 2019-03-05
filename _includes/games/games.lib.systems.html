@@ -1,0 +1,9 @@
+<div uk-grid id="game-systems" class="uk-child-width-1-4">
+  {%- assign systems = site.systems -%}
+  {%- for system in systems -%}
+  <a class="game-system uk-button uk-button-text" href="{{system.url}}">
+    {% include /systems/{{system.abbreviation}}.svg %}
+    <span>{{system.name}}</span>
+  </a>
+  {%- endfor -%}
+</div>

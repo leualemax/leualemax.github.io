@@ -5,38 +5,16 @@ $secondary: #3500D3 !default;
 
 
 
-$pink: #ff00ff !default;
-$yellow: yellow !default;
-$blue: #00ffff !default;
-
 $playstation-4: #003791;
 $playstation-3: #146eb4;
 $nintendo-switch: #e4000f;
 $nintendo-3ds: #727272;
 
-$colors: ( // color map
-primary: $primary,
-secondary: $secondary,
-pink: $pink,
-yellow: $yellow,
-blue: $blue,
-);
 
+@mixin theme($name, $background, $text, $primary, $secondary) {
 
-@each $name,
-$color in $colors {
-  .color-#{$name} {
-    color: $color !important;
-  }
-
-  .bg-#{$name} {
-    background: $color !important;
-  }
-}
-
-
-@mixin theme($name, $background, $text, $primary, $secodary) {
-
+  @include games_theme($name, $background, $text, $primary, $secondary);
+  @include viagens_theme($name, $background, $text, $primary, $secondary);
 
   .theme-#{$name} {
     background: $background;
@@ -88,7 +66,7 @@ $color in $colors {
     }
 
     .tag-activate {
-      color: $secodary !important;
+      color: $secondary !important;
     }
 
     .master-nav {
@@ -101,6 +79,10 @@ $color in $colors {
       &::after {
         background: $background;
       }
+    }
+
+    i {
+      color: $primary;
     }
 
     .site-title {
@@ -116,6 +98,9 @@ $color in $colors {
 
 @include theme("dark", #676767, #0b0c10, #3500D3, #ff00ff);
 @include theme("light", #fff, #0b0c10, #3500D3, #ff00ff);
+
+
+
 
 
 .theme-dark {

@@ -5,19 +5,31 @@ layout: default
 
   <h1 class="title">{{page.title}}</h1>
 
-  <div>
-    {%- if page.playing -%}
-    <i class="fas fa-gamepad" uk-tooltip="Jogando"></i>
-    {%- endif -%}
-    {%- if page.finished -%}
-    <i class="fas fa-trophy" uk-tooltip="Terminado"></i>
-    {%- endif -%}
-    {%- if page.in_collection -%}
-    <i class="fas fa-bookmark" uk-tooltip="Na Biblioteca de {{page.owned_platform}}"></i>
-    {%- endif -%}
+  <div uk-grid>
+    <div class="game-card uk-width-1-4">
+      <div class="uk-card uk-card-secondary uk-card-default">
+        <div class="platform p{{page.owned_platform}}">
+          {{page.owned_platform |
+          replace: "PS", "Playstation " |
+          replace: "NSW", "Nintendo Switch" |
+          replace: "3DS", "Nintendo 3DS"}}
+        </div>
+        <div class="uk-card-media-top">
+          <img class="uk-comment-avatar" src="{{page.cover}}" alt="Cover for {{page.title}}">
+        </div>
+      </div>
+    </div>
+    <div class="uk-width-3-4">
+
+      {%- assign show_status = true -%}
+      {%- include games/games.lib.icons.html -%}
+
+      {{content}}
+    </div>
   </div>
 
-  {{content}}
+
+
 
 
   {%- include disqus_comments.html -%}

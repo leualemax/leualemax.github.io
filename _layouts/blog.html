@@ -6,13 +6,13 @@ layout: default
 
   <article class="blog">
 
-    <h1 class="title">Artigos</h1>
+    <h1 class="title">Issues</h1>
 
     {{content}}
 
     {%- if site.posts.size > 0 -%}
     <div class="post-list">
-      {%- assign posts = site.posts | where: "categories", "article" | -%}
+      {%- assign posts = site.posts | where: "categories", "article" -%}
       {%- for post in posts -%}
 
       <article class="uk-article">

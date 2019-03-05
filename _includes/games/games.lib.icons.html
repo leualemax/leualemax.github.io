@@ -1,0 +1,23 @@
+<div class="game-status-icons">
+  {%- if game.playing -%}
+  <i class="fas fa-gamepad" uk-tooltip="Jogando"></i>
+  {%- endif -%}
+  {%- if game.finished -%}
+  <i class="fas fa-trophy" uk-tooltip="Terminado"></i>
+  {%- endif -%}
+
+  {%- if game.in_collection -%}
+  <i class="fas fa-bookmark" uk-tooltip="Na Biblioteca de {{game.owned_platform}}"></i>
+  {%- else -%}
+  <i class="fas fa-shopping-bag" uk-tooltip="Wishlist"></i>
+  {%- endif -%}
+
+  {%- if show_status -%}
+  {%- if game.status == "INSTALLED" -%}
+  <i class="fas fa-play" uk-tooltip="Instalado"></i>
+  {%- endif -%}
+  {%- if game.status != "INSTALLED" -%}
+  <i class="fas fa-download" uk-tooltip="Instalado"></i>
+  {%- endif -%}
+  {%- endif -%}
+</div>

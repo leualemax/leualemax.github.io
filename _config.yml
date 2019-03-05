@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: The Leu Alemax
-subtitle: not a futurist
+title: Not a Futurist
+subtitle: ou qualquer outra coisa
 email: leualemax@gmail.com
 disqus:
   shortname: leualemax
@@ -39,6 +39,15 @@ defaults:
       type: "systems"
     values:
       layout: "system"
+copyrights:
+  - text: icone em svg - new nintendo 3ds by tezar tantular from the Noun Project
+    link: https://thenounproject.com/kerismaker/collection/game-consoles-outline/?i=2012304
+  - text: icone em svg - nintendo switch by tezar tantular from the Noun Project
+    link: https://thenounproject.com/kerismaker/collection/game-consoles-outline/?i=2012268
+  - text: icone em svg - playstation 4 by tezar tantular from the Noun Project
+    link: https://thenounproject.com/kerismaker/collection/game-consoles-outline/?i=2012279
+  - text: icone em svg - Playstation 3 by tezar tantular from the Noun Project
+    link: https://thenounproject.com/kerismaker/collection/game-consoles-outline/?i=2012278
 # Build setting
 markdown: kramdown
 theme: minima

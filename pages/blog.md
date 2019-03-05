@@ -1,5 +1,5 @@
 ---
 layout: blog
-title: Artigos
+title: Issues
 permalink: /artigos/
 ---

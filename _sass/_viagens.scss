@@ -1,0 +1,19 @@
+@mixin viagens_theme($name, $background, $text, $primary, $secondary) {
+  .viagens {
+
+    svg {
+
+      path#BR,
+      path#TH,
+      path#SG,
+      path#AE {
+        fill: $secondary !important;
+
+        &:hover {
+          cursor: pointer;
+          fill: $primary !important;
+        }
+      }
+    }
+  }
+}

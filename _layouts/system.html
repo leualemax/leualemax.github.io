@@ -1,96 +1,23 @@
 ---
 layout: default
 ---
+
 <article class="games game-article">
+  <h1 class="title">{{ page.title }}</h1>
 
-  <h1 class="title">{{page.title}}</h1>
-
-  {{content}}
+  {{ content }}
 
   <h5>Jogando:</h5>
-
-  <div uk-grid class="uk-child-width-1-2 uk-child-width-1-4@l uk-grid-match">
-    {%- assign posts = site.games | where: "owned_platform", page.abbreviation | where: "playing" , true -%}
-    {%- for game in posts -%}
-    <div class="playing-game">
-      <div class="uk-card uk-card-secondary uk-card-default">
-        <div class="platform p{{game.owned_platform}}">
-          {{game.owned_platform |
-          replace: "PS", "Playstation " |
-          replace: "NSW", "Nintendo Switch" |
-          replace: "3DS", "Nintendo 3DS"}}
-        </div>
-        <div class="uk-card-media-top">
-          <div class="uk-cover-container uk-height-small">
-            <img class="uk-comment-avatar" src="{{game.cover}}" alt="Cover for {{game.title}}">
-          </div>
-        </div>
-        <div class="uk-card-body" style="text-align:center">
-          <a href="{{game.url}}" class="uk-button uk-button-text">{{game.title}}</a>
-        </div>
-      </div>
-    </div>
-    {%- endfor -%}
-  </div>
+  {%- assign games = site.games | where: "owned_platform", page.abbreviation |
+  where: "playing" , true -%} {% include games/games.lib.cards.html %}
 
   <h5>Jogos Finalizados:</h5>
-
-  <div uk-grid class="uk-child-width-1-2 uk-child-width-1-4@l uk-grid-match">
-    {%- assign posts = site.games | where: "owned_platform", page.abbreviation | where: "finished" , true -%}
-    {%- for game in posts -%}
-    <div class="playing-game">
-      <div class="uk-card uk-card-secondary uk-card-default">
-        <div class="platform p{{game.owned_platform}}">
-          {{game.owned_platform |
-          replace: "PS", "Playstation " |
-          replace: "NSW", "Nintendo Switch" |
-          replace: "3DS", "Nintendo 3DS"}}
-        </div>
-        <div class="uk-card-media-top">
-          <div class="uk-cover-container uk-height-small">
-            <img class="uk-comment-avatar" src="{{game.cover}}" alt="Cover for {{game.title}}">
-          </div>
-        </div>
-        <div class="uk-card-body" style="text-align:center">
-          <a href="{{game.url}}" class="uk-button uk-button-text">{{game.title}}</a>
-        </div>
-      </div>
-    </div>
-    {%- endfor -%}
-  </div>
+  {%- assign games = site.games | where: "owned_platform", page.abbreviation |
+  where: "finished" , true -%} {% include games/games.lib.cards.html %}
 
   <h5>Biblioteca:</h5>
 
-  <div class="search-lib">
-    <ul class="uk-list js-filter">
-      {%- assign posts = site.games | where: "owned_platform", page.abbreviation -%}
-      {%- for game in posts -%}
-      <li data-playing="{{game.playing}}" data-finished="{{game.finished}}" data-title="{{game.title | downcase}}"
-        data-collection="{{game.in_collection}}">
-        <div class="uk-grid-small game-article" uk-grid>
-          <div class="uk-width-expand" uk-leader>
-            <a href="{{game.url}}" class="uk-button uk-button-text">{{game.title}}</a>
-          </div>
-          <div>
-            {%- if game.playing -%}
-            <i class="fas fa-gamepad" uk-tooltip="Jogando"></i>
-            {%- endif -%}
-            {%- if game.finished -%}
-            <i class="fas fa-trophy" uk-tooltip="Terminado"></i>
-            {%- endif -%}
-            {%- if game.status == "INSTALLED" -%}
-            <i class="fas fa-play" uk-tooltip="Instalado"></i>
-            {%- endif -%}
-            {%- if game.status != "INSTALLED" -%}
-            <i class="fas fa-download" uk-tooltip="Instalado"></i>
-            {%- endif -%}
-          </div>
-
-
-        </div>
-      </li>
-      {%- endfor -%}
-    </ul>
-  </div>
-
+  {%- assign games = site.games | where: "owned_platform", page.abbreviation -%}
+  {%- assign show_status = true -%} {% include games/games.lib.list.html %} {%-
+  include disqus_comments.html -%}
 </article>

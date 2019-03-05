@@ -1,0 +1,89 @@
+<form class="uk-search uk-search-default">
+  <span uk-search-icon></span>
+  <input
+    onchange="change(this)"
+    class="uk-search-input"
+    type="search"
+    placeholder="Buscar jogo..."
+  />
+</form>
+
+<div class="search-lib" uk-filter="target: .js-filter">
+  <ul id="filter-bar" class="uk-subnav uk-subnav-pill filter">
+    <li>
+      Filtros
+    </li>
+    <li uk-filter-control="filter: [data-playing='true']; group: status;">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-gamepad fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li uk-filter-control="filter: [data-finished='true']; group: status;">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-trophy fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li
+      uk-filter-control="filter: [data-collection='true']; group: collection;"
+    >
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-bookmark fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+    <li
+      uk-filter-control="filter: [data-collection='false']; group: collection;"
+    >
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-shopping-bag"></i>
+        </span>
+      </a>
+    </li>
+    <li uk-filter-control="">
+      <a href="#">
+        <span class="fa-stack">
+          <i class="fas fa-redo-alt fa-stack-1x"></i>
+        </span>
+      </a>
+    </li>
+  </ul>
+
+  {%- assign games = site.games -%} {% include games/games.lib.list.html %}
+</div>
+
+<script>
+  function change(e) {
+    var filter = document.querySelector(".js-filter");
+    var filterBar = document.querySelector("#filter-bar");
+    var all = filter.querySelectorAll("li");
+
+    if (e.value !== "") {
+      for (var i = 0; i < all.length; i++) {
+        if (all[i].tagName == "LI") {
+          all[i].style.display = "none";
+        }
+      }
+
+      var activeFilter = filter.querySelectorAll(
+        'li [data-title^="' + e.value + '"]'
+      );
+      for (var i = 0; i < activeFilter.length; i++) {
+        if (activeFilter[i].tagName == "LI") {
+          activeFilter[i].style.display = "block";
+        }
+      }
+    } else {
+      for (var i = 0; i < all.length; i++) {
+        if (all[i].tagName == "LI") {
+          all[i].style.display = "block";
+        }
+      }
+    }
+  }
+</script>
