@@ -1,0 +1,33 @@
+@mixin issues_theme($name, $background, $text, $primary, $secondary) {
+
+  .theme-#{$name} {
+    .issue {
+      .date-issue {
+        background: $text;
+        color: $background;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 14px;
+        float: right;
+        margin-top: -20px;
+      }
+
+      .post-title {
+        line-height: 48px;
+        height: 48px;
+        font-size: 36px;
+        border-radius: 8px;
+        padding: 0px;
+        padding-left: 64px;
+
+        svg {
+          fill: $secondary;
+          width: 48px;
+          height: 48px;
+          margin-left: -56px;
+          position: absolute;
+        }
+      }
+    }
+  }
+}

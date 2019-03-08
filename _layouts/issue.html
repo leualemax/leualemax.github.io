@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="issue">
+
+  <h1 class="post-title">
+    {% include svgs/issue.svg %}
+    {{ page.title | escape }}
+  </h1>
+
+  <div class="date-issue">{{ page.date }}</div>
+
+
+  <hr>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+  {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

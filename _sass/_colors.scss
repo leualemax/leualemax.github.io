@@ -15,6 +15,7 @@ $nintendo-3ds: #727272;
 
   @include games_theme($name, $background, $text, $primary, $secondary);
   @include viagens_theme($name, $background, $text, $primary, $secondary);
+  @include issues_theme($name, $background, $text, $primary, $secondary);
 
   .theme-#{$name} {
     background: $background;
