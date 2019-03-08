@@ -12,8 +12,8 @@ layout: default
 
     <hr />
     <h5>O que ando jogando:</h5>
-    {%- assign games = site.games | where: "owned_platform", page.abbreviation |
-    where: "playing" , true -%} {% include games/games.lib.cards.html %}
+    {%- assign games = site.games | where: "playing" , true -%}
+    {% include games/games.lib.cards.html %}
 
     <hr />
     <h5>Todos os meus jogos:</h5>
