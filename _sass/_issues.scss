@@ -2,6 +2,13 @@
 
   .theme-#{$name} {
     .issue {
+
+      iframe {
+        width: 760px;
+        height: 320px;
+        margin: 10px;
+      }
+
       .date-issue {
         background: $text;
         color: $background;
