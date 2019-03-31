@@ -1,6 +1,7 @@
 <ul class="games-list uk-list js-filter">
   {%- for game in games -%}
-  <li data-playing="{{game.playing}}" data-finished="{{game.finished}}" data-title="{{game.title | downcase}}"
+  <li data-playing="{{game.playing}}" data-finished="{{game.finished}}" 
+      data-title="{{game.title | downcase}}"
     data-collection="{{game.in_collection}}">
     <div class="uk-grid-small game-article" uk-grid>
       <div class="uk-width-expand" uk-leader>
